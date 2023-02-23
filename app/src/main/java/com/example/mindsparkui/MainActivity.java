@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         username=findViewById(R.id.username);
         password=findViewById(R.id.password);
         loginButton =findViewById(R.id.loginButton);
-        if(username.getText().toString().equals("12345") && password.getText().toString().equals("12345")){
+        if(username.getText().toString().equals("1") && password.getText().toString().equals("1")){
             Intent intent = new Intent(MainActivity.this, events.class);
             startActivity(intent);
         }else{
@@ -34,4 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        Intent i=new Intent();
     }
+
+
 }

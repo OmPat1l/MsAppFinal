@@ -1,8 +1,10 @@
 package com.example.mindsparkui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -32,7 +34,7 @@ public class events extends AppCompatActivity {
         binding.appBarEvents.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Contact Developer: omajitsinhpatil@gmail.com", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -61,5 +63,10 @@ public class events extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_events);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    public void startLoad(View view) {
+        Toast.makeText(this, "Check mail box", Toast.LENGTH_SHORT).show();
+        Intent buff=new Intent(events.this,loadingpass.class);
+        startActivity(buff);
     }
 }
