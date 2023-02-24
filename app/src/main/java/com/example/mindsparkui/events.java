@@ -24,6 +24,7 @@ import java.util.List;
 
 public class events extends AppCompatActivity {
 
+
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityEventsBinding binding;
 

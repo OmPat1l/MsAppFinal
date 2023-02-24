@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--    <com.denzcoskun.imageslider.ImageSlider-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="200dp"-->
-<!--        app:iss_auto_cycle="true"-->
-<!--        app:iss_delay="0"-->
-<!--        app:iss_period="3000"-->
-<!--        app:iss_placeholder="@color/black"-->
-<!--        app:iss_error_image="@color/minepurpler"-->
-<!--        android:id="@+id/slider"-->
-<!--        android:layout_margin="20dp"/>-->
-</RelativeLayout>
+    android:layout_height="match_parent">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
