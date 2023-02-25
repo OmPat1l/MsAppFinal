@@ -69,6 +69,11 @@ public class events extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.events, menu);
         return true;
     }
+    public void startQuery(View view){
+//        Toast.makeText(this, "Hello this is function", Toast.LENGTH_SHORT).show();
+        Intent buff=new Intent(events.this,FAQans.class);
+        startActivity(buff);
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
