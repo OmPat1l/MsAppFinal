@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="290dp"
             android:orientation="horizontal"
             android:padding="16dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -30,14 +30,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/om" />
+                    android:src="@drawable/faq2" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:padding="16dp"
-                    android:text="Om Patil"
+                    android:text="Virtual Reality"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -55,14 +55,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/om" />
+                    android:src="@drawable/faq1"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:padding="16dp"
-                    android:text="Om Patil"
+                    android:text="AI ML"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -80,14 +81,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/om" />
+                    android:src="@drawable/faq3" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="bottom"
                     android:padding="16dp"
-                    android:text="Om Patil"
+                    android:text="Coding"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -115,6 +116,7 @@
         app:layout_constraintGuide_begin="16dp" />
 
 
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="415dp"
@@ -126,6 +128,8 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <androidx.cardview.widget.CardView
+            android:onClick="startQuery"
+
             android:id="@+id/card_view1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -213,6 +217,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="startQuery"
+
             android:id="@+id/card_view3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -255,6 +261,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="startQuery"
+
             android:id="@+id/card_view5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -297,6 +305,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:onClick="startQuery"
+
             android:id="@+id/card_view6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
