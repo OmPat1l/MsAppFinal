@@ -11,15 +11,7 @@
         android:orientation="vertical"
        >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register Now!"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="#333333"
-            android:padding="8dp"
-            />
+
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -76,21 +68,22 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:src="@drawable/msone" />
+                        android:src="@drawable/mstwo" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Product Name"
+                        android:text="Robo Wars"
+                        android:textStyle="bold"
                         android:textColor="#333333"
                         android:textSize="16sp"
                         android:paddingTop="8dp"
-                        android:paddingBottom="8dp"/>
+                        android:paddingBottom="1dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="$29.99"
+                        android:text="Window Closes today!"
                         android:textColor="#F44336"
                         android:textSize="16sp"/>
 
@@ -106,21 +99,22 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:src="@drawable/msone" />
+                        android:src="@drawable/msthree" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Product Name"
+                        android:text="Official Merch"
                         android:textColor="#333333"
+                        android:textStyle="bold"
                         android:textSize="16sp"
                         android:paddingTop="8dp"
-                        android:paddingBottom="8dp"/>
+                        android:paddingBottom="1dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="$29.99"
+                        android:text="2 left!"
                         android:textColor="#F44336"
                         android:textSize="16sp"/>
 
