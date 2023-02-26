@@ -1,137 +1,387 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-       >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-
-        <HorizontalScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/image_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/msone"/>
+
+            <ImageView
+                android:id="@+id/image_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mstwo"/>
+
+            <ImageView
+                android:id="@+id/image_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/msthree"/>
 
             <LinearLayout
+                android:id="@+id/circle_indicator_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="16dp">
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/rounded_corner"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <View
+                    android:id="@+id/circle_1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_indicator"/>
 
-                    <ImageView
-                        android:layout_width="match_parent"
+                <View
+                    android:id="@+id/circle_2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_indicator"/>
 
-                        android:layout_height="120dp"
-                        android:src="@drawable/msone" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="Cultural Night"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:paddingTop="4dp"
-                        android:paddingBottom="1dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="19 passes left!"
-                        android:textColor="#F44336"
-                        android:textSize="16sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/rounded_corner"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:src="@drawable/mstwo" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Robo Wars"
-                        android:textStyle="bold"
-                        android:textColor="#333333"
-                        android:textSize="16sp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="1dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Window Closes today!"
-                        android:textColor="#F44336"
-                        android:textSize="16sp"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/rounded_corner"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:src="@drawable/msthree" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Official Merch"
-                        android:textColor="#333333"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="1dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="2 left!"
-                        android:textColor="#F44336"
-                        android:textSize="16sp"/>
-
-                </LinearLayout>
-
-                <!-- Add more LinearLayouts here for more products -->
+                <View
+                    android:id="@+id/circle_3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_indicator"/>
 
             </LinearLayout>
 
-        </HorizontalScrollView>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="120dp"
+                            android:src="@drawable/msone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="Cultural Night"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="1dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="19 passes left!"
+                            android:textColor="#F44336"
+                            android:textSize="16sp"/>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/mstwo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Robo Wars"
+                            android:textStyle="bold"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="1dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Window Closes today!"
+                            android:textColor="#F44336"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/msthree" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Official Merch"
+                            android:textColor="#333333"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="1dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 left!"
+                            android:textColor="#F44336"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <!-- Add more LinearLayouts here for more products -->
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_edit_note_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_people_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compete"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_monetization_on_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Win"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    >
+
+                    <!-- Card 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/faq2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:padding="16dp"
+                            android:text="Virtual Reality"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Card 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/faq1"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:padding="16dp"
+                            android:text="AI ML"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Card 3 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="200dp"
+                        android:layout_height="300dp"
+                        android:layout_marginStart="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/faq3" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:padding="16dp"
+                            android:text="Coding"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
+</ScrollView>
 
 
 
-</LinearLayout>
+
+
+
 
         <!-- Deal card 2 -->
 

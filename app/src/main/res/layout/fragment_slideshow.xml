@@ -4,357 +4,512 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_height="match_parent">
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="290dp"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
 
-            <!-- Card 1 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
-                android:layout_height="300dp"
+                android:id="@+id/card_view111"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp">
 
-                <ImageView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/faq2" />
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"
-                    android:padding="16dp"
-                    android:text="Virtual Reality"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    <ImageView
+                        android:id="@+id/icon12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
 
+                    <TextView
+                        android:id="@+id/text78"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon12"
+                        android:text=" Can I participate in other events of MindSpark’22?"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- Card 2 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
-                android:layout_height="300dp"
-                android:layout_marginStart="16dp"
+                android:id="@+id/card_view222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp">
 
-                <ImageView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/faq1"
-                    />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"
-                    android:padding="16dp"
-                    android:text="AI ML"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    <ImageView
+                        android:id="@+id/icon122"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
 
+                    <TextView
+                        android:id="@+id/text22"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon122"
+                        android:text=" Do team members have to be from the same college??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
-
-            <!-- Card 3 -->
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
-                android:layout_height="300dp"
-                android:layout_marginStart="16dp"
+                android:id="@+id/card_view22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp">
 
-                <ImageView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/faq3" />
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="bottom"
-                    android:padding="16dp"
-                    android:text="Coding"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+                    <ImageView
+                        android:id="@+id/icon1222"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
 
+                    <TextView
+                        android:id="@+id/text2222"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon1222"
+                        android:text=" Do team members have to be from the same college??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view222222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon122222"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text234"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon122222"
+                        android:text=" Do team members have to be from the same college??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view22222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon13434"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text23434"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon13434"
+                        android:text=" Do team members have to be from the same college??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon1"
+                        android:text=" Do team members have to be from the same college??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view3"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon2"
+                        android:text=" Which IDE (Integrated Development Environment) will be provided??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view188"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text88"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon8"
+                        android:text=" Can I participate in other events of MindSpark’22?"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon"
+                        android:text=" Can I participate in other events of MindSpark’22?"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view5"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon3"
+                        android:text=" Which IDE (Integrated Development Environment) will be provided?"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view6"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+
+                android:onClick="startQuery"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/icon9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/baseline_lightbulb_24" />
+
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/icon9"
+                        android:text=" Can I register on the day of the event??"
+
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
 
         </LinearLayout>
-    </HorizontalScrollView>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="403dp"
-        android:layout_height="140dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/horizontalScrollView"></LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="16dp" />
+    </ScrollView>
 
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="415dp"
-        android:layout_height="415dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2">
-
-        <androidx.cardview.widget.CardView
-            android:onClick="startQuery"
-
-            android:id="@+id/card_view1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="7dp"
-
-
-            android:layout_marginRight="16dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_lightbulb_24" />
-
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@+id/icon"
-                    android:text=" Can I participate in other events of MindSpark’22?"
-
-                    android:textSize="16sp" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_view2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="16dp"
-
-
-            android:onClick="startQuery"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/icon1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_lightbulb_24" />
-
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@+id/icon1"
-                    android:text=" Do team members have to be from the same college??"
-
-                    android:textSize="16sp" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:onClick="startQuery"
-
-            android:id="@+id/card_view3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="7dp"
-
-            android:layout_marginRight="16dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/icon2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_lightbulb_24" />
-
-                <TextView
-                    android:id="@+id/text4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@+id/icon2"
-                    android:text=" Which IDE (Integrated Development Environment) will be provided??"
-
-                    android:textSize="16sp" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:onClick="startQuery"
-
-            android:id="@+id/card_view5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="7dp"
-
-            android:layout_marginRight="16dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/icon3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_lightbulb_24" />
-
-                <TextView
-                    android:id="@+id/text7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@+id/icon3"
-                    android:text=" Which IDE (Integrated Development Environment) will be provided?"
-
-                    android:textSize="16sp" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:onClick="startQuery"
-
-            android:id="@+id/card_view6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="7dp"
-
-            android:layout_marginRight="16dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/icon9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/baseline_lightbulb_24" />
-
-                <TextView
-                    android:id="@+id/text6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@+id/icon9"
-                    android:text=" Can I register on the day of the event??"
-
-                    android:textSize="16sp" />
-
-
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="295dp" />
+        app:layout_constraintGuide_begin="89dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
@@ -16,6 +17,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.mindsparkui.databinding.ActivityEventsBinding;
 
@@ -27,6 +29,10 @@ public class events extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityEventsBinding binding;
+//    private ViewPager viewPager;
+//    private LinearLayout circleIndicatorLayout;
+//    private int[] imageResources = {R.drawable.msone, R.drawable.mstwo, R.drawable.msthree};
+//    private int currentPage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
