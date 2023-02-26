@@ -1,8 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Now!"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:padding="8dp"
+            />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_corner"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+
+                        android:layout_height="120dp"
+                        android:src="@drawable/msone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Cultural Night"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="1dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="19 passes left!"
+                        android:textColor="#F44336"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_corner"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/msone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$29.99"
+                        android:textColor="#F44336"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_corner"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/msone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$29.99"
+                        android:textColor="#F44336"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <!-- Add more LinearLayouts here for more products -->
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+        <!-- Deal card 2 -->
+
