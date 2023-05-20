@@ -80,8 +80,7 @@
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -90,7 +89,6 @@
                     android:padding="16dp">
 
                     <LinearLayout
-
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="16dp"
@@ -100,7 +98,6 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-
                             android:layout_height="120dp"
                             android:src="@drawable/msone" />
 
@@ -112,17 +109,14 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:paddingTop="4dp"
-                            android:paddingBottom="1dp"/>
+                            android:paddingBottom="1dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="19 passes left!"
                             android:textColor="#F44336"
-                            android:textSize="16sp"/>
-
-
-
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -147,16 +141,17 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:paddingTop="8dp"
-                            android:paddingBottom="1dp"/>
+                            android:paddingBottom="1dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Window Closes today!"
                             android:textColor="#F44336"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
@@ -178,23 +173,22 @@
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:paddingTop="8dp"
-                            android:paddingBottom="1dp"/>
+                            android:paddingBottom="1dp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2 left!"
                             android:textColor="#F44336"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                     <!-- Add more LinearLayouts here for more products -->
 
                 </LinearLayout>
-
-
             </HorizontalScrollView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
