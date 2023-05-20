@@ -116,7 +116,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign-in success, update UI with the signed-in user's information
+                            String username = account.getDisplayName();
+                            String imageUrl = account.getPhotoUrl().toString();
+
                             Intent intent = new Intent(MainActivity.this, events.class);
+                            intent.putExtra("username", username);
+                            intent.putExtra("imageUrl", imageUrl);
                             startActivity(intent);
                         } else {
                             // If sign-in fails, display a message to the user.
@@ -126,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
     EditText username;
     EditText password;
