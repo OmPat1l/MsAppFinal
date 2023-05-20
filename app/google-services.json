@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "654204966352",
+    "project_id": "mindspark-51b5a",
+    "storage_bucket": "mindspark-51b5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654204966352:android:8ada094050c4fd194ad5d5",
+        "android_client_info": {
+          "package_name": "com.example.mindsparkui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654204966352-hp0no279o04shomsehkf21v49u349c03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2N35AwykC3MhX0WfqxalOQoeZK1dC7qU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654204966352-hp0no279o04shomsehkf21v49u349c03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

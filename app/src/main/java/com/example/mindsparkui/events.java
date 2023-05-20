@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -21,8 +22,20 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.mindsparkui.databinding.ActivityEventsBinding;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class events extends AppCompatActivity {
 
@@ -88,8 +101,19 @@ public class events extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
     public void startLoad(View view) {
-        Toast.makeText(this, "Check mail box", Toast.LENGTH_SHORT).show();
-        Intent buff=new Intent(events.this,loadingpass.class);
-        startActivity(buff);
+        EditText email = findViewById(R.id.username1);
+        EditText password = findViewById(R.id.password1);
+
+        String emailText = email.getText().toString();
+        String passwordText = password.getText().toString();
+
+        Intent i = new Intent(events.this, loadingpass.class);
+        i.putExtra("email", emailText);
+        i.putExtra("password", passwordText);
+        startActivity(i);
     }
+
+
+
+
 }

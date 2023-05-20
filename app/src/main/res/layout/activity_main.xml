@@ -67,6 +67,17 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/minepurpler"
                 app:cornerRadius="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/loginButtonGoogle"
+                android:textStyle="bold"
+                android:text="Google"
+                android:onClick="startScreen"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/teal_200"
+                app:cornerRadius="20dp"/>
         </LinearLayout>
 
 
