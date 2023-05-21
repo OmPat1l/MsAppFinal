@@ -3,6 +3,7 @@ package com.example.mindsparkui;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +51,11 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.mindsparkui.databinding.ActivityEventsBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,7 +63,9 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -70,8 +78,10 @@ import okhttp3.Response;
 public class events extends AppCompatActivity {
     private ImageView imageView;
     private TextView userName;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
+    String username ="";
+    String imageUrl="";
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityEventsBinding binding;
     private ViewPager viewPager;
@@ -115,8 +125,8 @@ public class events extends AppCompatActivity {
         // Get the passed data from MainActivity
         Intent intent = getIntent();
         if (intent != null) {
-            String username = intent.getStringExtra("username");
-            String imageUrl = intent.getStringExtra("imageUrl");
+             username = intent.getStringExtra("username");
+             imageUrl = intent.getStringExtra("imageUrl");
 
             // Set the username in the header TextView
             userName.setText(username);
@@ -148,25 +158,97 @@ public class events extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-    public void startLoad(View view) {
-//        logoutButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Perform logout actions here
-//                logout();
-//            }
-//        });
-        EditText email = findViewById(R.id.username1);
-        EditText password = findViewById(R.id.password1);
+//    public void startLoad(View view) {
+////
+//        EditText mis = findViewById(R.id.username1);
+//        EditText email = findViewById(R.id.password1);
+//
+//        String emailText = email.getText().toString();
+//        String misText = mis.getText().toString();
+//        Toast.makeText(this, "passes would be created", Toast.LENGTH_SHORT).show();
+//
+////        Intent i = new Intent(events.this, loadingpass.class);
+////        i.putExtra("email", emailText);
+////        i.putExtra("password", passwordText);
+////        startActivity(i);
+//    }
+public void startLoad(View view) {
+    EditText misEditText = findViewById(R.id.username1);
+    EditText emailEditText = findViewById(R.id.password1);
 
-        String emailText = email.getText().toString();
-        String passwordText = password.getText().toString();
+    String emailText = emailEditText.getText().toString();
+    String misText = misEditText.getText().toString();
 
-        Intent i = new Intent(events.this, loadingpass.class);
-        i.putExtra("email", emailText);
-        i.putExtra("password", passwordText);
-        startActivity(i);
-    }
+    // Start the loadingpass activity
+    Intent loadingIntent = new Intent(events.this, loadingpass.class);
+    startActivity(loadingIntent);
+
+    // Create a new Firestore instance
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    // Reference the "passesCreated" collection
+    CollectionReference passesCollection = db.collection("passesCreated");
+
+    // Query the collection for documents that match the given email and misText
+    Query query = passesCollection.whereEqualTo("email", emailText)
+            .whereEqualTo("misText", misText);
+
+    // Execute the query
+    query.get().addOnCompleteListener(task -> {
+        if (task.isSuccessful()) {
+            QuerySnapshot querySnapshot = task.getResult();
+
+            // Check if a document with the given email and misText exists
+            if (querySnapshot != null && !querySnapshot.isEmpty()) {
+                // Document already exists, retrieve its details
+                DocumentSnapshot documentSnapshot = querySnapshot.getDocuments().get(0);
+                String documentId = documentSnapshot.getId();
+                String existingUsername = documentSnapshot.getString("username");
+
+                // Start the passGenerated activity and pass the necessary data
+                Intent intent = new Intent(events.this, passGenerated.class);
+                intent.putExtra("username", existingUsername);
+                intent.putExtra("misText", misText);
+                intent.putExtra("documentId", documentId);
+                intent.putExtra("message", "Pass already created");
+                startActivity(intent);
+            } else {
+                // Document doesn't exist, create a new one
+                Map<String, Object> passData = new HashMap<>();
+                passData.put("username", username);
+                passData.put("email", emailText);
+                passData.put("misText", misText);
+
+                // Add the new document to the "passesCreated" collection
+                ((CollectionReference) passesCollection).add(passData)
+                        .addOnSuccessListener(documentReference -> {
+                            String documentId = documentReference.getId();
+
+                            // Start the passGenerated activity after a delay
+                            Handler handler = new Handler();
+                            handler.postDelayed(() -> {
+                                Intent passGeneratedIntent = new Intent(events.this, passGenerated.class);
+                                passGeneratedIntent.putExtra("username", username);
+                                passGeneratedIntent.putExtra("misText", misText);
+                                passGeneratedIntent.putExtra("documentId", documentId);
+                                passGeneratedIntent.putExtra("message", "Pass created successfully");
+                                startActivity(passGeneratedIntent);
+                            }, 2000); // 2 seconds delay
+                        })
+                        .addOnFailureListener(e -> {
+                            // Handle the failure case
+                            Toast.makeText(this, "Failed to create pass", Toast.LENGTH_SHORT).show();
+                        });
+            }
+        } else {
+            // Handle the failure case
+            Toast.makeText(this, "Failed to retrieve data from Firebase", Toast.LENGTH_SHORT).show();
+        }
+    });
+
+    Toast.makeText(this, "Passes would be created", Toast.LENGTH_SHORT).show();
+}
+
 
     public void logout(MenuItem item) {
         // Perform logout actions here, such as signing out the user
