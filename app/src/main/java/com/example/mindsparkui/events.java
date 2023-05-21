@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
@@ -80,8 +81,8 @@ public class events extends AppCompatActivity {
     private TextView userName;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    String username ="";
-    String imageUrl="";
+    String username ;
+    String imageUrl;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityEventsBinding binding;
     private ViewPager viewPager;
@@ -134,6 +135,7 @@ public class events extends AppCompatActivity {
             // Load and display the image using an image loading library like Glide or Picasso
             // Example using Glide:
             Glide.with(this).load(imageUrl).into(imageView);
+            Toast.makeText(this, "url "+ imageUrl, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -176,9 +178,13 @@ public void startLoad(View view) {
     EditText misEditText = findViewById(R.id.username1);
     EditText emailEditText = findViewById(R.id.password1);
 
+
     String emailText = emailEditText.getText().toString();
     String misText = misEditText.getText().toString();
-
+    if(TextUtils.isEmpty(misText) ||   TextUtils.isEmpty(emailText)) {
+        Toast.makeText(this, "Enter Valid Details", Toast.LENGTH_SHORT).show();
+        return;
+    }
     // Start the loadingpass activity
     Intent loadingIntent = new Intent(events.this, loadingpass.class);
     startActivity(loadingIntent);
@@ -190,8 +196,7 @@ public void startLoad(View view) {
     CollectionReference passesCollection = db.collection("passesCreated");
 
     // Query the collection for documents that match the given email and misText
-    Query query = passesCollection.whereEqualTo("email", emailText)
-            .whereEqualTo("misText", misText);
+    Query query = passesCollection.whereEqualTo("email", emailText);
 
     // Execute the query
     query.get().addOnCompleteListener(task -> {
@@ -209,6 +214,8 @@ public void startLoad(View view) {
                 Intent intent = new Intent(events.this, passGenerated.class);
                 intent.putExtra("username", existingUsername);
                 intent.putExtra("misText", misText);
+
+                intent.putExtra("imageUrl", imageUrl);
                 intent.putExtra("documentId", documentId);
                 intent.putExtra("message", "Pass already created");
                 startActivity(intent);
@@ -229,6 +236,7 @@ public void startLoad(View view) {
                             handler.postDelayed(() -> {
                                 Intent passGeneratedIntent = new Intent(events.this, passGenerated.class);
                                 passGeneratedIntent.putExtra("username", username);
+                                passGeneratedIntent.putExtra("imageUrl", imageUrl);
                                 passGeneratedIntent.putExtra("misText", misText);
                                 passGeneratedIntent.putExtra("documentId", documentId);
                                 passGeneratedIntent.putExtra("message", "Pass created successfully");
